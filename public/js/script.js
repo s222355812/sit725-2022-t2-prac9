@@ -1,15 +1,15 @@
 const cardList = [
   {
-      title: "Nature 2",
-      image: "images/img1.jpg",
-      link: "About Nature 2",
-      desciption: "Demo desciption about Nature 2"
+      title: "Wine Tasting",
+      image: "images/winetasting.jpg",
+      link: "Wine Tasting",
+      desciption: "Find best places for Wine Tasting"
   },
   {
-      title: "Nature 3",
-      image: "images/img2.jpg",
-      link: "About Nature 3",
-      desciption: "Demo desciption about Nature 3"
+      title: "Day Trip",
+      image: "images/daytrip.jpg",
+      link: "Day Trip",
+      desciption: "Search best destinations for Day Trip"
   }
 ]
 
