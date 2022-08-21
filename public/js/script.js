@@ -6,7 +6,7 @@ const getProjects = () => {
   })
 }
 
-//ajax function...
+//ajax function
 const addProjectToApp = (project) => {
   $.ajax({
       url: '/api/projects',
@@ -54,11 +54,13 @@ const clickMe = () => {
 
 const submitForm = () => {
   let formData = {};
-  formData.first_name = $('#first_name').val();
-  formData.last_name = $('#last_name').val();
-  formData.email = $('#email').val();
+  formData.title = $('#title').val();
+  formData.image = $('#image').val();
+  formData.link = $('#link').val();
+  formData.description = $('#description').val();
 
   console.log("Form Data Submitted: ", formData);
+  addProjectToApp(formData);
 }
 
 $(document).ready(function(){
