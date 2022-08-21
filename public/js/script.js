@@ -1,3 +1,24 @@
+const getProjects = () => {
+  $.get('/api/projects',(response) => {
+      if(response.statusCode==200){
+          addCards(response.data);
+      }
+  })
+}
+
+//ajax function...
+const addProjectToApp = (project) => {
+  $.ajax({
+      url: '/api/projects',
+      data: project,
+      type: 'POST',
+      success: (result) => {
+          alert(result.message);
+          location.reload(); // it automatically reloads the page 
+      }
+  })
+}
+
 const cardList = [
   {
       title: "Wine Tasting",
@@ -47,4 +68,6 @@ $(document).ready(function(){
   $('#formSubmit').click(()=>{
       submitForm();
   })
+  getProjects();
+  $('.modal').modal();
 })
