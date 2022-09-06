@@ -4,21 +4,26 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s222355812/sit725-2022-t2-prac4.git"
+    "url": "git+https://github.com/s222355812/sit725-2022-t2-prac6.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/s222355812/sit725-2022-t2-prac4/issues"
+    "url": "https://github.com/s222355812/sit725-2022-t2-prac6/issues"
   },
-  "homepage": "https://github.com/s222355812/sit725-2022-t2-prac4#readme",
+  "homepage": "https://github.com/s222355812/sit725-2022-t2-prac6#readme",
   "dependencies": {
+    "chai": "^4.3.6",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
     "express": "^4.18.1",
-    "mongodb": "^4.9.0"
+    "mocha": "^10.0.0",
+    "mongodb": "^4.9.0",
+    "request": "^2.88.2"
   }
 }
