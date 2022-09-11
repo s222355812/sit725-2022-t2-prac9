@@ -63,6 +63,13 @@ const submitForm = () => {
   addProjectToApp(formData);
 }
 
+//connecting the socket
+let socket = io();
+
+socket.on('number', (msg) => {
+  $('#heading').html(`Random number: ${msg}`);
+});
+
 $(document).ready(function(){
   $('.materialboxed').materialbox();
   addCards(cardList);
