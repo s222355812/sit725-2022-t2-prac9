@@ -1,2 +1,2 @@
-# Practical 4
-# type command npm run start to runn application on http://localhost:3000/
+# Practical 7
+# type command npm run start to run application on http://localhost:3000/
