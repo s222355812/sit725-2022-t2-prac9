@@ -10,7 +10,7 @@ const insertProjects = (project,callback) => {
 }
 
 const getProjects = (callback) => {
-    projectCollection.find({}).toArray(callback);
+    // projectCollection.find({}).toArray(callback);
 }
 
 module.exports = {

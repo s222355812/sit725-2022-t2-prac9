@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s222355812/sit725-2022-t2-prac7.git"
+    "url": "git+https://github.com/s222355812/sit725-2022-t2-prac9.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/s222355812/sit725-2022-t2-prac7/issues"
+    "url": "https://github.com/s222355812/sit725-2022-t2-prac9/issues"
   },
-  "homepage": "https://github.com/s222355812/sit725-2022-t2-prac7#readme",
+  "homepage": "https://github.com/s222355812/sit725-2022-t2-prac9#readme",
   "dependencies": {
     "chai": "^4.3.6",
     "cors": "^2.8.5",
@@ -26,5 +26,9 @@
     "mongodb": "^4.9.0",
     "request": "^2.88.2",
     "socket.io": "^4.5.2"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {}
 }

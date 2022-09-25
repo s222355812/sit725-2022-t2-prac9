@@ -1,7 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
 .navbar-size {
     width: 100%;
     margin: 0 auto;
-    background-color: #6a0a5c;
+    background: rgb(106,10,92);
+    background: linear-gradient(90deg, rgba(106,10,92,0.8018557764902836) 45%, rgba(0,212,255,0.9587185215883228) 100%);
 }
 .user-image-size {
     height: 56px;
@@ -24,3 +27,11 @@
     color: #b8b5b5;
 }
 
+.splitscreen {
+    display: flex;
+  }
+  
+  .splitscreen .left,
+  .splitscreen .right {
+    /* flex:auto */
+  }

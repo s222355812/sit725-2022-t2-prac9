@@ -67,7 +67,7 @@ const submitForm = () => {
 let socket = io();
 
 socket.on('number', (msg) => {
-  $('#heading').html(`Random number: ${msg}`);
+  $('#time').html(`Time: ${msg}`);
 });
 
 $(document).ready(function(){
