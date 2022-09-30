@@ -6,7 +6,7 @@ getDB.then((result) => {
     projectCollection = result.collection('SIT725');
 });
 
-const Project = require("../models/Project");
+const Project = require("../models/project");
 
 //get api
 router.get('/', (req, res) => {
