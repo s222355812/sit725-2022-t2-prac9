@@ -1,4 +1,4 @@
-# PRACTICAL 9
+# Practical 9
 # In terminal first install npm
 # followed by npm start to run the application
 
@@ -16,3 +16,4 @@
 ![Screenshot (182)](https://user-images.githubusercontent.com/109494663/192145235-e5b616d5-19a1-418c-ae8c-dd228d44a4b0.png)
 
 ![Screenshot (181)](https://user-images.githubusercontent.com/109494663/192145229-847261c7-d638-4a3c-9a07-177b14b7445e.png)
+
