@@ -1,18 +1,24 @@
-let client = require("../dbConnect");
-let projectCollection;
-setTimeout(() => {
-    projectCollection = client.mongoClient.db().collection("pets");
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-}, 2000)
+const projectSchema = Schema({
+    title:{
+        type: String,
+        required: true,
+    },
+    image:{
+        type: String,
+        required: true,
+    },
+    link: {
+        type: String,
+        required: true,
+    },
+    description:{
+        type: String,
+        required: true,
+    }
+});
 
-const insertProjects = (project,callback) => {
-    projectCollection.insert(project,callback);
-}
 
-const getProjects = (callback) => {
-    // projectCollection.find({}).toArray(callback);
-}
-
-module.exports = {
-    insertProjects, getProjects
-}
+module.exports = mongoose.model("Project", projectSchema);

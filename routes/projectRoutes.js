@@ -1,41 +1,55 @@
 var express = require("express")
-var router= express.Router();
-let projectCollection; 
+var router = express.Router();
+let { getDB } = require('../dbConnect');
+let projectCollection;
+getDB.then((result) => {
+    projectCollection = result.collection('SIT725');
+});
 
-//inserting project
-const insertProjects = (project, callback) => {
-    projectCollection.insert(project,callback);
-}
-
-//getting project
-const getProjects = (callback) => {
-    projectCollection.find({}).toArray(callback);
-}
-
-// post api
-router.post('/',(req,res) => {
-    console.log("New Project added", req.body)
-    var newProject = req.body;
-    insertProjects(newProject,(err,result) => {
-        if(err) {
-            res.json({statusCode: 400, message: err})
-        }
-        else {
-            res.json({statusCode: 200, message:"Project Successfully added", data: result})
-        }
-    })
-})
+const Project = require("../models/Project");
 
 //get api
-router.get('/',(req,res) => {
-    getProjects((err,result) => {
-        if(err) {
-            res.json({statusCode: 400, message: err})
-        }
-        else {
-            res.json({statusCode: 200, message:"Success", data: result})
+router.get('/', (req, res) => {
+    projectCollection.find({}).toArray((err, result) => {
+        if (err) {
+            res.json({
+                statusCode: 400,
+                message: err
+            })
+        } else {
+            res.json({
+                statusCode: 200,
+                message: "Success",
+                data: result
+            })
         }
     })
 })
 
-module.exports=router;
+// post api
+router.post('/', (req, res) => {
+    console.log("New Project added", req.body)
+    var newProject = new Project({
+        title: req.body.title,
+        image: "images/" +req.body.image + ".jpg",
+        link: req.body.link,
+        description: req.body.description
+    })
+
+    projectCollection.insertOne(newProject, (err, result) => {
+        if (err) {
+            res.json({
+                statusCode: 400,
+                message: err
+            })
+        } else {
+            res.json({
+                statusCode: 200,
+                message: "Project Successfully added",
+                data: result
+            })
+        }
+    })
+})
+
+module.exports = router;

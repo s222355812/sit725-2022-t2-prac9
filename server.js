@@ -2,12 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const dbConnect = require('./dbConnect');
 const projectRoutes = require('./routes/projectRoutes');
-const userRoutes = require('./routes/userRoutes');
-const {
-  response
-} = require('express');
 
 let http = require('http').createServer(app);
 let io = require('socket.io')(http);
@@ -19,12 +14,6 @@ app.use(express.urlencoded({
 }));
 app.use(cors())
 app.use('/api/projects', projectRoutes)
-
-app.get('/addNumber/:n1/:n2', function (request, response) {
-  response.json({
-    statusCode: 200
-  });
-});
 
 io.on('connection', (socket) => {
   console.log('a user connected', socket.id);
